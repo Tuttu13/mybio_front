@@ -1,0 +1,49 @@
+/* CSSリセット */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* デフォルトスタイル */
+body {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.home-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  background-color: #f0f0f0;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 1rem;
+}
+
+.about-section,
+.projects-section,
+.contact-section {
+  padding: 2rem 0;
+}
+
+.footer {
+  padding: 1rem 0;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+}
+
+.header {
+  width: 100%;
+}
