@@ -8,8 +8,7 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import axios from "axios";
-import React,{useEffect,useState} from "react";
+import React,{useState} from "react";
 import ProjectModal from "./ProjectModal";
 
 const Projects: React.FC = () => {
@@ -22,24 +21,33 @@ const Projects: React.FC = () => {
     technologies: string;
     responsibilities: string;
   }>(null);
-  const [projects, setProjects] = useState<Array<{
-    title: string;
-    description: string;
-    start_period: string;
-    end_period: string;
-    technologies: string;
-    responsibilities: string;
-  }>>([]);
 
-  useEffect(() => {
-    axios.get("http://127.0.0.1:8000/api/works/assign/")
-      .then(response => {
-        setProjects(response.data);
-      })
-      .catch(error => {
-        console.error("There was an error fetching the projects!", error);
-      });
-  }, []);
+  const projects = [
+    {
+      title: "Project X",
+      description: "This is a description of Project X.",
+      start_period: "2022-01",
+      end_period: "2022-06",
+      technologies: "React, TypeScript",
+      responsibilities: "Frontend Development",
+    },
+    {
+      title: "Project Y",
+      description: "This is a description of Project Y.",
+      start_period: "2021-05",
+      end_period: "2021-12",
+      technologies: "Node.js, Express",
+      responsibilities: "Backend Development",
+    },
+    {
+      title: "Project Z",
+      description: "This is a description of Project Z.",
+      start_period: "2020-03",
+      end_period: "2020-09",
+      technologies: "Python, Django",
+      responsibilities: "Fullstack Development",
+    },
+  ];
 
   const handleClickOpen = (project: {
     title: string;

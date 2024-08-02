@@ -1,5 +1,6 @@
 import About from "./components/About";
-import Contact from "./components/Contact";
+// メール機能
+// import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Hobbies from "./components/Hobbies";
 import Home from "./components/Home";
@@ -19,7 +20,6 @@ function App() {
         <Projects />
         <PersonalProjects />
         <Hobbies />
-        <Contact />
         <Footer />
       </div>
     </div>

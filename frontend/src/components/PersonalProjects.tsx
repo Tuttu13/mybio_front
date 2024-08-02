@@ -8,8 +8,7 @@ import {
   Grid,
   Typography,
 } from "@mui/material";
-import axios from "axios";
-import React,{useEffect,useState} from "react";
+import React,{useState} from "react";
 import ProjectModal from "./ProjectModal";
 
 const PersonalProjects: React.FC = () => {
@@ -22,24 +21,33 @@ const PersonalProjects: React.FC = () => {
     technologies: string;
     responsibilities: string;
   }>(null);
-  const [personalProjects, setPersonalProjects] = useState<Array<{
-    title: string;
-    description: string;
-    start_period: string;
-    end_period: string;
-    technologies: string;
-    responsibilities: string;
-  }>>([]);
 
-  useEffect(() => {
-    axios.get("http://127.0.0.1:8000/api/works/personal/")
-      .then(response => {
-        setPersonalProjects(response.data);
-      })
-      .catch(error => {
-        console.error("There was an error fetching the personal projects!", error);
-      });
-  }, []);
+  const personalProjects = [
+    {
+      title: "Project A",
+      description: "This is a description of Project A.",
+      start_period: "2021-01",
+      end_period: "2021-06",
+      technologies: "React, TypeScript",
+      responsibilities: "Frontend Development",
+    },
+    {
+      title: "Project B",
+      description: "This is a description of Project B.",
+      start_period: "2020-05",
+      end_period: "2020-12",
+      technologies: "Node.js, Express",
+      responsibilities: "Backend Development",
+    },
+    {
+      title: "Project C",
+      description: "This is a description of Project C.",
+      start_period: "2019-03",
+      end_period: "2019-09",
+      technologies: "Python, Django",
+      responsibilities: "Fullstack Development",
+    },
+  ];
 
   const handleClickOpen = (project: {
     title: string;
