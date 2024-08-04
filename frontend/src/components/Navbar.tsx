@@ -31,20 +31,28 @@ const Navbar: React.FC = () => {
     { text: "Skills", to: "skills" },
     { text: "Projects", to: "projects" },
     { text: "Personal Projects", to: "personal-projects" },
-    { text: "Hobbies", to: "hobbies" },
-    { text: "Contact", to: "contact" },
+    { text: "Hobby", to: "hobbies" },
   ];
 
   return (
     <>
       <AppBar position="fixed" sx={{ backgroundColor: "#006666" }}>
         <Toolbar>
-          <Typography variant="h6" sx={{ flexGrow: 1 }}>
+          <Typography variant="h6" sx={{ flexGrow: 1, display: 'flex', alignItems: 'center' }}>
+            {/* ロゴを追加する場合はここに <img src="path_to_logo" alt="logo" style={{ marginRight: '8px' }} /> */}
             つっつ's Bio
           </Typography>
           <Box sx={{ display: { xs: "none", md: "flex" }, gap: 2 }}>
             {menuItems.map((item) => (
-              <Button color="inherit" key={item.text}>
+              <Button
+                color="inherit"
+                key={item.text}
+                sx={{
+                  '&:hover': {
+                    backgroundColor: '#005555',
+                  },
+                }}
+              >
                 <ScrollLink
                   to={item.to}
                   smooth={true}
@@ -74,7 +82,7 @@ const Navbar: React.FC = () => {
         sx={{ display: { md: "none" } }}
       >
         <Box
-          sx={{ width: 250 }}
+          sx={{ width: 250, '& .MuiListItem-button:hover': { backgroundColor: '#005555' } }}
           role="presentation"
           onClick={handleDrawerClose}
           onKeyDown={handleDrawerClose}

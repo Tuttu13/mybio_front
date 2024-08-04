@@ -1,13 +1,13 @@
 import {
-    Button,
-    Dialog,
-    DialogActions,
-    DialogContent,
-    DialogContentText,
-    DialogTitle,
-    Slide,
-    SlideProps,
-    Typography
+  Button,
+  Dialog,
+  DialogActions,
+  DialogContent,
+  DialogContentText,
+  DialogTitle,
+  Slide,
+  SlideProps,
+  Typography
 } from "@mui/material";
 import React,{forwardRef} from "react";
   
@@ -47,19 +47,19 @@ import React,{forwardRef} from "react";
             {project ? project.description : ""}
           </DialogContentText>
           <Typography variant="h6" gutterBottom>
-            Period
+            期間
           </Typography>
           <DialogContentText>
             {project ? `${project.start_period} - ${project.end_period}` : ""}
           </DialogContentText>
           <Typography variant="h6" gutterBottom>
-            Technologies
+            技術スタック
           </Typography>
           <DialogContentText>
             {project ? project.technologies : ""}
           </DialogContentText>
           <Typography variant="h6" gutterBottom>
-            Responsibilities
+            担当領域
           </Typography>
           <DialogContentText>
             {project ? project.responsibilities : ""}

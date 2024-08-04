@@ -12,7 +12,7 @@ const Footer: React.FC = () => {
       }}
     >
       <Typography variant="body2">
-        &copy; 2024 My Bio. All rights reserved.
+        &copy; 2024 tuttu13_IPA. All rights reserved.
       </Typography>
     </Box>
   );

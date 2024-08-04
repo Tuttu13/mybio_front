@@ -24,27 +24,27 @@ const PersonalProjects: React.FC = () => {
 
   const personalProjects = [
     {
-      title: "Project A",
-      description: "This is a description of Project A.",
-      start_period: "2021-01",
-      end_period: "2021-06",
-      technologies: "React, TypeScript",
-      responsibilities: "Frontend Development",
+      title: "自己紹介webサイト",
+      description: "個人開発",
+      start_period: "未定",
+      end_period: "",
+      technologies: 'React | TypeScript | Docker | AWS',
+      responsibilities: "設計 | 実装 | 単体テスト",
     },
     {
-      title: "Project B",
-      description: "This is a description of Project B.",
-      start_period: "2020-05",
-      end_period: "2020-12",
-      technologies: "Node.js, Express",
+      title: "イベント紹介webサイト",
+      description: "個人開発(請負)",
+      start_period: "未定",
+      end_period: "",
+      technologies: 'React | TypeScript | Docker | AWS',
       responsibilities: "Backend Development",
     },
     {
-      title: "Project C",
-      description: "This is a description of Project C.",
-      start_period: "2019-03",
-      end_period: "2019-09",
-      technologies: "Python, Django",
+      title: "建築士のポートフォリオwebサイト",
+      description: "個人開発(請負)",
+      start_period: "未定",
+      end_period: "",
+      technologies: 'React | TypeScript | webGL | Docker | AWS',
       responsibilities: "Fullstack Development",
     },
   ];
@@ -69,8 +69,11 @@ const PersonalProjects: React.FC = () => {
   return (
     <Box sx={{ backgroundColor: "#33CFCB", py: 8 }}>
       <Container id="personal-projects">
-        <Typography variant="h3" component="h2" gutterBottom>
+        <Typography variant="h3" component="h2">
           Personal Projects
+        </Typography>
+        <Typography variant="body1" paragraph>
+          個人で開発を行っているプロジェクト
         </Typography>
         <Grid container spacing={4}>
           {personalProjects.map((project, index) => (

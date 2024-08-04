@@ -15,9 +15,18 @@ const About: React.FC = () => {
           MY PROFILE
         </Typography>
         <Typography variant="body1" paragraph>
-          エンジニア3年目つっつと申します。エンジニア0年目からPython, Djangoでやらせていただいているので、
+          つっつと申します。主に業務ではPython, Djangoでやらせていただいているので、
           <br />
           Pythonをより深く知り、プロフェッショナルなPythonistになれるように日々取り組んでいます。
+          <br />
+          個人的なエンジニアとしてのビジョンとしては、フルスタックエンジニアとして活躍したいです。
+          <br />
+          将来的には、プレイングマネージャーを目指しています！
+          <br />
+          <br />
+          現在は転職活動中です！
+          <br />
+          ご連絡の際はX（旧Twitter）のDMからよろしくお願いいたします！
         </Typography>
       </Container>
     </Box>
