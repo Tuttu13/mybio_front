@@ -1,4 +1,5 @@
-import React from 'react';
+import React from "react";
+import MenuItems from "./components/MenuItems";
 
 const Sidebar: React.FC = () => {
   return (
@@ -8,13 +9,11 @@ const Sidebar: React.FC = () => {
         aria-label="close sidebar"
         className="drawer-overlay"
       ></label>
-      <ul className="menu bg-base-200 min-h-full w-48 p-4">
-        <li>
-          <a href="/">Sidebar Item 1</a>
-        </li>
-        <li>
-          <a href="/">Sidebar Item 2</a>
-        </li>
+      <ul className="menu bg-base-200 min-h-full w-36 p-4">
+        <div>
+            Items
+        </div>
+        <MenuItems />
       </ul>
     </>
   );

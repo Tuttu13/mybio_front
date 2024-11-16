@@ -1,10 +1,18 @@
+import {motion} from "framer-motion";
 import React from "react";
 
 const Navbar: React.FC = () => {
+  const menuItems = ["Home", "About", "Projects", "Works", "Skills", "Articles"];
+
   return (
-    <div className="navbar bg-base-300 w-full">
+    <motion.div
+      className="navbar bg-base-300 w-full"
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
       {/* タイトル */}
-      <div className="flex-1 px-2">Navbar Title</div>
+      <div className="flex-1 px-4">Tuttu</div>
 
       {/* ドロワーボタン（小画面用） */}
       <div className="flex-none lg:hidden">
@@ -32,15 +40,21 @@ const Navbar: React.FC = () => {
       {/* メニューと大画面用ドロワーボタン */}
       <div className="hidden flex-none lg:flex lg:justify-end">
         <ul className="menu menu-horizontal">
-          <li>
-            <a href="/">Navbar Item 1</a>
-          </li>
-          <li>
-            <a href="/">Navbar Item 2</a>
-          </li>
+          {menuItems.map((item, index) => (
+            <motion.li
+              key={item}
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.3, delay: index * 0.1 }}
+              whileHover={{ scale: 1.1, color: "#3b82f6" }} // ホバー時のアニメーション
+              className="hover:text-primary"
+            >
+              <a href="/">{item}</a>
+            </motion.li>
+          ))}
         </ul>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
