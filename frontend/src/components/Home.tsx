@@ -1,7 +1,7 @@
 import {Book,EventNote,GitHub,Twitter} from "@mui/icons-material";
 import {Avatar,Box,Container,IconButton,Typography} from "@mui/material";
 import React from "react";
-import profileImage from "../assets/profile.jpg";
+import profileImage from "../assets/image.png";
 
 const Home: React.FC = () => {
   return (
