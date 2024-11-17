@@ -10,9 +10,6 @@ const Sidebar: React.FC = () => {
         className="drawer-overlay"
       ></label>
       <ul className="menu bg-base-200 min-h-full w-36 p-4">
-        <div>
-            Items
-        </div>
         <MenuItems />
       </ul>
     </>

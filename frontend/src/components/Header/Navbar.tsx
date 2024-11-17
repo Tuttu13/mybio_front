@@ -1,8 +1,36 @@
+// Navbar.tsx
 import {motion} from "framer-motion";
 import React from "react";
 
 const Navbar: React.FC = () => {
   const menuItems = ["Home", "About", "Projects", "Works", "Skills", "Articles"];
+  const title = "Tuttu";
+  const titleLetters = title.split("");
+
+  // 親コンテナのバリアント
+  const titleContainerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.05, // 各子要素のアニメーション開始間隔
+      },
+    },
+  };
+
+  // 各文字のバリアント
+  const letterVariants = {
+    hidden: { opacity: 0, y: -20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        type: "spring",
+        damping: 12,
+        stiffness: 100,
+      },
+    },
+  };
 
   return (
     <motion.div
@@ -12,7 +40,23 @@ const Navbar: React.FC = () => {
       transition={{ duration: 0.5 }}
     >
       {/* タイトル */}
-      <div className="flex-1 px-4">Tuttu</div>
+      <motion.div
+        className="flex-1 px-4 text-xl font-bold"
+        variants={titleContainerVariants}
+        initial="hidden"
+        animate="visible"
+        transition={{ duration: 1.0, delay: 0.6 }} // タイトル全体のアニメーション時間と遅延
+      >
+        {titleLetters.map((letter, index) => (
+          <motion.span
+            key={index}
+            variants={letterVariants}
+            className="inline-block"
+          >
+            {letter === " " ? "\u00A0" : letter}
+          </motion.span>
+        ))}
+      </motion.div>
 
       {/* ドロワーボタン（小画面用） */}
       <div className="flex-none lg:hidden">
@@ -45,7 +89,7 @@ const Navbar: React.FC = () => {
               key={item}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: index * 0.1 }}
+              transition={{ duration: 0.3, delay: index * 0.1 + 0.4 }} // メニューアイテムの遅延をタイトルのアニメーション後に設定
               whileHover={{ scale: 1.1, color: "#3b82f6" }} // ホバー時のアニメーション
               className="hover:text-primary"
             >

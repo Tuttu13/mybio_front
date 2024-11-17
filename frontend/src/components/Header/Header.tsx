@@ -18,7 +18,7 @@ const Header: React.FC = () => {
 
   return (
     <motion.div
-      className="drawer drawer-end sticky top"
+      className="drawer drawer-end sticky top-0"
       variants={headerVariants}
       initial="hidden"
       animate="visible"

@@ -62,7 +62,7 @@ const Body: React.FC = () => {
 
   return (
     <div
-      className="hero min-h-[800px] bg-no-repeat bg-cover bg-center"
+      className="hero min-h-[720px] bg-no-repeat bg-cover bg-center"
       style={{
         backgroundImage: `url(${aircraftImage})`,
       }}
