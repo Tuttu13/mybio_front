@@ -38,9 +38,9 @@ const Navbar: React.FC = () => {
   return (
     <>
       <motion.div
-        initial={{ y: -100, opacity: 0 }}
+        initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
+        transition={{ duration: 0.4, ease: "easeOut" }}
       >
         <AppBar 
           position="fixed" 
@@ -64,11 +64,11 @@ const Navbar: React.FC = () => {
               {menuItems.map((item, index) => (
                 <motion.div
                   key={item.text}
-                  initial={{ opacity: 0, y: -20 }}
+                  initial={{ opacity: 0, y: -15 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.5 }}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.95 }}
+                  transition={{ delay: index * 0.05, duration: 0.3 }}
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.98 }}
                 >
                   <Button
                     color="inherit"
@@ -107,8 +107,8 @@ const Navbar: React.FC = () => {
             </Box>
             
             <motion.div
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
             >
               <IconButton
                 edge="end"
@@ -134,7 +134,7 @@ const Navbar: React.FC = () => {
           initial={{ x: 250 }}
           animate={{ x: 0 }}
           exit={{ x: 250 }}
-          transition={{ type: "spring", stiffness: 300, damping: 30 }}
+          transition={{ type: "spring", stiffness: 400, damping: 35 }}
         >
           <Box
             sx={{ 
@@ -150,10 +150,10 @@ const Navbar: React.FC = () => {
               {menuItems.map((item, index) => (
                 <motion.div
                   key={item.text}
-                  initial={{ opacity: 0, x: 50 }}
+                  initial={{ opacity: 0, x: 30 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: index * 0.1, duration: 0.4 }}
-                  whileHover={{ x: 10 }}
+                  transition={{ delay: index * 0.05, duration: 0.3 }}
+                  whileHover={{ x: 8 }}
                 >
                   <ScrollLink
                     to={item.to}

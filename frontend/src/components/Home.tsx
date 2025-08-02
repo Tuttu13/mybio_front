@@ -6,36 +6,36 @@ import profileImage from "../assets/image.png";
 
 const Home: React.FC = () => {
   const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.8,
-        staggerChildren: 0.3
+        duration: 0.4,
+        staggerChildren: 0.1
       }
     }
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 },
+    hidden: { opacity: 0, y: 20 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.6 }
+      transition: { duration: 0.3, ease: "easeOut" }
     }
   };
 
   const avatarVariants = {
-    hidden: { scale: 0, rotate: -180 },
+    hidden: { scale: 0, rotate: -90 },
     visible: {
       scale: 1,
       rotate: 0,
       transition: {
         type: "spring",
-        stiffness: 260,
-        damping: 20,
-        duration: 1
+        stiffness: 400,
+        damping: 25,
+        duration: 0.5
       }
     }
   };
@@ -46,14 +46,15 @@ const Home: React.FC = () => {
       scale: 1,
       transition: {
         type: "spring",
-        stiffness: 300,
-        damping: 15
+        stiffness: 500,
+        damping: 20,
+        duration: 0.3
       }
     },
     hover: {
-      scale: 1.2,
-      rotate: 360,
-      transition: { duration: 0.3 }
+      scale: 1.1,
+      rotate: 15,
+      transition: { duration: 0.2 }
     }
   };
 

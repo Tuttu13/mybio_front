@@ -11,37 +11,37 @@ const About: React.FC = () => {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3,
-        duration: 0.6
+        staggerChildren: 0.15,
+        duration: 0.3
       }
     }
   };
 
   const titleVariants = {
-    hidden: { opacity: 0, y: -50, scale: 0.8 },
+    hidden: { opacity: 0, y: -30, scale: 0.9 },
     visible: {
       opacity: 1,
       y: 0,
       scale: 1,
       transition: {
         type: "spring",
-        stiffness: 100,
-        damping: 15,
-        duration: 0.8
+        stiffness: 200,
+        damping: 20,
+        duration: 0.4
       }
     }
   };
 
   const textVariants = {
-    hidden: { opacity: 0, x: -100 },
+    hidden: { opacity: 0, x: -50 },
     visible: {
       opacity: 1,
       x: 0,
       transition: {
         type: "spring",
-        stiffness: 80,
-        damping: 20,
-        duration: 0.8
+        stiffness: 150,
+        damping: 25,
+        duration: 0.4
       }
     }
   };
