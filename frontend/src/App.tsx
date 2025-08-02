@@ -17,13 +17,32 @@ const theme = createTheme({
     secondary: {
       main: '#66D4D4',
     },
+    background: {
+      default: '#f8f9fa',
+      paper: '#ffffff',
+    },
   },
   typography: {
     fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
-    h3: {
+    h1: {
+      fontSize: '3rem',
+      fontWeight: 700,
+      marginBottom: '1.5rem',
+    },
+    h2: {
       fontSize: '2.5rem',
       fontWeight: 700,
       marginBottom: '1rem',
+    },
+    h3: {
+      fontSize: '2rem',
+      fontWeight: 600,
+      marginBottom: '1rem',
+    },
+    h4: {
+      fontSize: '1.5rem',
+      fontWeight: 600,
+      marginBottom: '0.75rem',
     },
     body1: {
       fontSize: '1.125rem',
@@ -31,6 +50,31 @@ const theme = createTheme({
     },
     button: {
       textTransform: 'none',
+      fontWeight: 600,
+    },
+  },
+  components: {
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          borderRadius: 12,
+          boxShadow: '0 4px 20px rgba(0,0,0,0.1)',
+          transition: 'all 0.3s ease-in-out',
+          '&:hover': {
+            transform: 'translateY(-4px)',
+            boxShadow: '0 8px 30px rgba(0,0,0,0.15)',
+          },
+        },
+      },
+    },
+    MuiButton: {
+      styleOverrides: {
+        root: {
+          borderRadius: 8,
+          padding: '10px 24px',
+          transition: 'all 0.3s ease-in-out',
+        },
+      },
     },
   },
 });
